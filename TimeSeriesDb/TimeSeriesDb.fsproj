@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <GenerateRuntimeConfigurationFiles>true</GenerateRuntimeConfigurationFiles>
+  </PropertyGroup>
+
+    <PropertyGroup>
+        <OutputType>Dll</OutputType>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="TimeSeriesDb.fs"></Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql.FSharp" Version="4.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.fsproj" />
+    <ProjectReference Include="..\BinanceApi\BinanceApi.fsproj" />
+  </ItemGroup>
+</Project>
